@@ -1,75 +1,133 @@
-# Smart Expense Analytics Budget Monitoring
-## Overview
+# 💡 Smart Expense Analytics & Budget Monitoring
 
-Smart Expense Analytics & Budget Monitoring is a beginner-friendly data analytics and automation project that analyses personal expense data and generates meaningful insights using SQL-style logic and n8n workflows.
+## 📊 Overview
 
-The project focuses on transforming raw expense entries into structured summaries such as total spending, category-wise expenses, and monthly totals, while maintaining a clean and visual GitHub presentation.
+Smart Expense Analytics & Budget Monitoring is an end-to-end analytics and automation project that transforms raw daily expense data into **actionable financial insights**.
 
-## Problem Statement
+The project reads expense and budget data from Google Sheets, processes it using **SQL-style aggregation logic implemented through n8n**, and automatically **triggers alerts when spending exceeds predefined budgets**.
 
-Tracking daily expenses manually often leads to poor visibility into spending patterns.
-Without proper aggregation, it becomes difficult to understand:
-- Where most of the money is spent
-- Monthly spending behaviour
-- Category-wise expense distribution
-
-This project solves the problem by automating expense analysis and presenting clear summaries using data analytics techniques.
-
-## Architecture
-
-The project follows a simple and practical data flow:
-
-Google Sheets → n8n Automation → Aggregated Outputs → SQL-style Analysis
-
-![Workflow Architecture](architecture/workflow_architecture.png)
-
-## n8n Workflow Explanation
-
-The automation workflow performs the following steps:
-
-1. Reads expense data from Google Sheets
-2. Calculates the total expense amount
-3. Groups expenses by category and calculates category-wise totals
-4. Aggregates expenses on a monthly basis
-5. Outputs clean and structured results for analysis and reporting
-
-![n8n Workflow](n8n/expense_analysis_workflow.png)
-
-
-### Raw Expense Data
-![Expense Sheet](screenshots/expense_sheet.png)
-
-### Category-wise Expense Output
-![Category Totals](screenshots/category_totals_output.png)
-
-### Monthly Expense Output
-![Monthly Totals](screenshots/monthly_totals_output.png)
-
-## SQL Logic Used
-
-Although the data processing is automated using n8n, the aggregation logic mirrors standard SQL queries.
-
-### Total Expense
-```sql
-SELECT SUM(amount) AS total_expense
-FROM expenses;
-
-**### Monthly Expense**
-SELECT month, SUM(amount) AS monthly_total
-FROM expenses
-GROUP BY month;
-
-**### Category-wise Expense**
-SELECT month, SUM(amount) AS monthly_total
-FROM expenses
-GROUP BY month;
+This project demonstrates a complete **data → analysis → decision → action** workflow, similar to real-world finance and analytics systems.
 
 ---
 
-## Tools Used
+## 🎯 Problem Statement
+
+Manually tracking expenses provides data but not insights.
+
+Common challenges include:
+- No clear visibility into total spending
+- Difficulty identifying high-spend categories
+- No automatic indication when budgets are exceeded
+
+This project solves these problems by automating expense analysis and generating alerts when overspending occurs.
+
+---
+
+## 🧠 Core Idea
+
+> **Analyse expenses → detect overspending → trigger alerts**
+
+This project does not stop at reporting.  
+It converts insights into **automated actions**, which is the real goal of analytics systems.
+
+---
+
+## 🏗️ Architecture
+
+Google Sheets (Expenses & Budgets)
+↓
+n8n Workflow
+↓
+SQL-style Aggregation Logic
+↓
+Budget Comparison
+↓
+Overspending Alerts
+
+
+---
+
+## ⚙️ n8n Workflow – Step-by-Step
+
+### Step 1: Expense Data Input
+
+Daily expenses are stored in Google Sheets and read into the n8n workflow.
+
+![Expense Data](screenshots/expense_sheet.png)
+
+---
+
+### Step 2: Total Expense Calculation
+
+The workflow calculates the total amount spent across all expense entries.
+
+**Purpose**
+- High-level spending visibility
+- Monthly expense KPI
+
+![Total Expense Output](screenshots/total_expense_output.png)
+
+---
+
+### Step 3: Category-wise Expense Analysis
+
+Expenses are grouped by category to understand where money is being spent.
+
+**Purpose**
+- Identify high-spending categories
+- Enable budget comparison
+
+![Category-wise Totals](screenshots/category_totals_output.png)
+
+---
+
+### Step 4: Monthly Expense Aggregation
+
+Expenses are aggregated on a monthly basis to analyse spending trends.
+
+**Purpose**
+- Month-on-month analysis
+- Trend visibility
+
+![Monthly Totals](screenshots/monthly_totals_output.png)
+
+---
+
+### Step 5: Budget vs Actual Comparison
+
+Actual category-wise expenses are compared with predefined monthly budgets.
+
+**Output Includes**
+- Category
+- Actual spent amount
+- Budget amount
+- Difference
+- Status (OVER / WITHIN budget)
+
+This mirrors real-world financial reporting logic.
+
+![Budget Comparison](screenshots/budget_comparison_output.png)
+
+---
+
+### 🚨 Step 6: Overspending Alert (Core Feature)
+
+When a category exceeds its budget, the workflow automatically triggers an alert.
+
+**Alert Contains**
+- Category name
+- Budget amount
+- Actual spending
+- Overspent difference
+
+This completes the **analytics → action** loop.
+
+![Alert Triggered](screenshots/alert_triggered.png)
+
+---
+**Tools used**
 
 - Google Sheets – Data storage
 - n8n – Workflow automation
 - SQL – Data aggregation logic
-- GitHub – Project documentation and version control
-
+- GitHub – Documentation and version control
