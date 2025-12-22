@@ -1,0 +1,31 @@
+expense_id,date,category,description,amount,month
+1,2025-01-01,Food,Breakfast,80,2025-01
+2,2025-01-01,Transport,Bus fare,40,2025-01
+3,2025-01-02,Food,Lunch,150,2025-01
+4,2025-01-02,Shopping,Groceries,650,2025-01
+5,2025-01-03,Entertainment,Movie,250,2025-01
+6,2025-01-03,Food,Dinner,220,2025-01
+7,2025-01-04,Transport,Auto,90,2025-01
+8,2025-01-04,Health,Medicines,180,2025-01
+9,2025-01-05,Food,Snacks,120,2025-01
+10,2025-01-05,Shopping,Clothes,1200,2025-01
+11,2025-01-06,Food,Lunch,160,2025-01
+12,2025-01-06,Transport,Cab,250,2025-01
+13,2025-01-07,Food,Dinner,240,2025-01
+14,2025-01-07,Entertainment,OTT subscription,399,2025-01
+15,2025-01-08,Health,Doctor visit,600,2025-01
+16,2025-01-08,Food,Breakfast,90,2025-01
+17,2025-01-09,Transport,Fuel,500,2025-01
+18,2025-01-09,Food,Dinner,260,2025-01
+19,2025-01-10,Shopping,Household items,750,2025-01
+20,2025-01-10,Food,Snacks,140,2025-01
+21,2025-01-11,Entertainment,Dining out,850,2025-01
+22,2025-01-11,Transport,Cab,300,2025-01
+23,2025-01-12,Food,Lunch,170,2025-01
+24,2025-01-12,Health,Vitamins,220,2025-01
+25,2025-01-13,Shopping,Online order,980,2025-01
+26,2025-01-14,Food,Dinner,280,2025-01
+27,2025-01-15,Transport,Fuel,550,2025-01
+28,2025-01-15,Food,Snacks,160,2025-01
+29,2025-01-16,Entertainment,Event tickets,1200,2025-01
+30,2025-01-17,Food,Lunch,190,2025-01
