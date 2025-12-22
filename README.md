@@ -1,4 +1,4 @@
-# Smart-Expense-Analytics-Budget-Monitoring
+# Smart Expense Analytics Budget Monitoring
 ## Overview
 
 Smart Expense Analytics & Budget Monitoring is a beginner-friendly data analytics and automation project that analyses personal expense data and generates meaningful insights using SQL-style logic and n8n workflows.
@@ -35,6 +35,16 @@ The automation workflow performs the following steps:
 
 ![n8n Workflow](n8n/expense_analysis_workflow.png)
 
+
+### Raw Expense Data
+![Expense Sheet](screenshots/expense_sheet.png)
+
+### Category-wise Expense Output
+![Category Totals](screenshots/category_totals_output.png)
+
+### Monthly Expense Output
+![Monthly Totals](screenshots/monthly_totals_output.png)
+
 ## SQL Logic Used
 
 Although the data processing is automated using n8n, the aggregation logic mirrors standard SQL queries.
@@ -54,24 +64,7 @@ SELECT month, SUM(amount) AS monthly_total
 FROM expenses
 GROUP BY month;
 
-
-📌 This section is **very powerful for interviews**.
-
 ---
-
-## 6️⃣ Key Outputs (visual proof)
-
-```md
-## Key Outputs
-
-### Raw Expense Data
-![Expense Sheet](screenshots/expense_sheet.png)
-
-### Category-wise Expense Output
-![Category Totals](screenshots/category_totals_output.png)
-
-### Monthly Expense Output
-![Monthly Totals](screenshots/monthly_totals_output.png)
 
 ## Tools Used
 
